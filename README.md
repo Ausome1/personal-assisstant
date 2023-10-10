@@ -1,10 +1,10 @@
-# Personal Assisstant
+# Personal Assistant
 
 # How to install requirements
 pip install requirements.txt
 
 # How to run
-python3 personal-assisstant.py
+python3 personal-assistant.py
 
 # How to use
 You can customize the bot by changing these variables in the code.
