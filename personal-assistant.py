@@ -22,8 +22,6 @@ listOfCommands = {
 	"weather" : ["show weather", "weather report", "show me the weather", "show weather report", "show me the weather report"],
 	"screenshot" : ["take screenshot", "take a screenshot"],
 	"availablecommands" : ["help", "available commands", "list of commands"],
-	"checkmarx1" : ["open check marks one"],
-	"checkmarx" : ["open check marks"],
 	"commandprompt" : ["open command prompt"],
 	"powershell" : ["open powershell"],
 	"firefox" : ["open firefox"],
