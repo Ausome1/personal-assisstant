@@ -181,7 +181,7 @@ def main():
 
 			### Close the personal assisstant ###
 			elif any(c in command for c in listOfCommands['closeapp']):
-				respond("Goodbye, " + WHAT_SHOULD_I_CALL_YOU)
+				respond(f"Goodbye, {WHAT_SHOULD_I_CALL_YOU}.")
 				break
 
 			### Open a Timer ###
@@ -196,7 +196,7 @@ def main():
 
 			### Exit Multi-Command Mode ###
 			elif any (c in command for c in listOfCommands['exitmulticommandmode']):
-				respond("Exiting multi command mode")
+				respond("Exiting multi command mode.")
 				MultiCommandMode = False
 
 			### Rut Roh Raggy, assistant doesn't know that command. ###

@@ -1,7 +1,7 @@
 # Personal Assistant
 
 # How to install requirements
-pip install requirements.txt
+pip install -r requirements.txt
 
 # How to run
 python3 personal-assistant.py
