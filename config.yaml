@@ -1,0 +1,6 @@
+botname: Cosmo
+voice: 0 # 0 for male, 1 for female
+font: Arial
+hotkey_trigger:
+  enabled: True
+  key: ctrl

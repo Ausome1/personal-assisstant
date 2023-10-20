@@ -1,0 +1,115 @@
+{
+	"intents": [
+		{
+			"tag": "shut_down",
+			"patterns": [
+				"exit", 
+				"go to sleep", 
+				"shut down"
+			],
+			"responses": [
+				""
+			]
+		},
+		{
+			"tag": "weather",
+			"patterns": [
+				"show weather",
+				"weather report",
+				"show me the weather",
+				"show weather report",
+				"show me the weather report"
+			],
+			"responses": [""]
+		},
+		{
+			"tag": "screenshot",
+			"patterns": [
+				"take screenshot",
+				"take a screenshot"
+			],
+			"responses": [
+				"I saved a screenshot on your desktop for you."
+			]
+		},
+		{
+			"tag": "open_cmd_prompt",
+			"patterns": [
+				"open command prompt"
+			],
+			"responses": [
+				"Opening a command prompt terminal window for you."
+			]
+		},
+		{
+			"tag": "powershell",
+			"patterns": [
+				"open powershell"
+			],
+			"responses": [
+				"Opening powershell for you."
+			]
+		},
+		{
+			"tag": "firefox",
+			"patterns": [
+				"open firefox"
+			],
+			"responses": [
+				"Opening Firefox for you."
+			]
+		},
+		{
+			"tag": "chrome",
+			"patterns": [
+				"open chrome"
+			],
+			"responses": [
+				"Opening Chrome for you."
+			]
+		},
+		{
+			"tag": "feelings",
+			"patterns": [
+				"how are you feeling"
+			],
+			"responses": [
+				"Let me show you how I'm feeling."
+			]
+		},
+		{
+			"tag": "timer",
+			"patterns": [
+				"set timer"
+			],
+			"responses": [
+				"Let me get you a timer."
+			]
+		},
+		{
+			"tag": "multi_command",
+			"patterns": [
+				"red alert"
+			],
+			"responses": [
+				"Entering multi command mode."
+			]
+		},
+		{
+			"tag": "exit_multi_command",
+			"patterns": [
+				"all clear"
+			],
+			"responses": [
+				"Exiting multi command mode."
+			]
+		},
+		{
+			"tag": "play_music",
+			"patterns": [
+				"play music"
+			],
+			"responses": [""]
+		}
+	]
+}
