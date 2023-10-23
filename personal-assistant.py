@@ -3,7 +3,6 @@
 #
 # @Author: Ausome1
 ####
-
 import keyboard
 import sys
 import threading
@@ -16,11 +15,14 @@ import os
 import urllib.parse
 import random
 import yaml
+import requests
 from neuralintents import BasicAssistant
 from datetime import datetime
+from bs4 import BeautifulSoup
 
 class Assistant:
 	def __init__(self):
+		requests.urllib3.disable_warnings(requests.urllib3.exceptions.InsecureRequestWarning)
 		self.multi_command_mode = False
 		self.desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 
@@ -46,7 +48,8 @@ class Assistant:
 			"timer": self._open_timer,
 			"multi_command": self._enter_multi_command_mode,
 			"exit_multi_command": self._exit_multi_command_mode,
-			"shut_down": self._shut_down
+			"shut_down": self._shut_down,
+			"answer_question": self._answer_question
 		})
 		
 		if os.path.exists('intent_model.keras'):
@@ -207,6 +210,30 @@ class Assistant:
 	def _exit_multi_command_mode(self):
 		print("Exiting multi-command mode")
 		self.multi_command_mode = False
+
+	def _answer_question(self):
+		self._respond("What is your question?")
+		print("Listening for your question...")
+
+		with sr.Microphone() as source:
+			self.recognizer.adjust_for_ambient_noise(source)
+			command = self._listen_for_command(source)
+
+			if command is not None:
+				try:
+					url = "https://www.google.com/search"
+					params = {'q': command}
+					headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"}
+					page = requests.get(url=url, params=params, headers=headers, verify=False)
+					soup = BeautifulSoup(page.text, "html.parser")
+					answer = soup.find("span", attrs = {"class":"hgKElc"})
+					tooltips = soup.find_all("span", attrs = {"role":"tooltip"})
+					for tooltip in tooltips:
+						tooltip.div.decompose()
+					self._respond(answer.get_text())
+				except Exception as e:
+					print(e)
+					self._respond("Sorry, I couldn't find an answer?")
 
 if __name__ == "__main__":
 	Assistant()

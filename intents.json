@@ -110,6 +110,15 @@
 				"play music"
 			],
 			"responses": [""]
+		},
+		{
+			"tag": "answer_question",
+			"patterns": [
+				"i have a question",
+				"answer question",
+				"answer a question"
+			],
+			"responses": [""]
 		}
 	]
 }
