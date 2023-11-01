@@ -2,7 +2,7 @@ PyAutoGUI==0.9.54
 pyttsx3==2.90
 SpeechRecognition==3.10.0
 pyaudio==0.2.13
-neuralintents=0.1.0
-PyYAML=6.0.1
-keyboard=0.13.5
-bs4=0.0.1
+neuralintents==0.1.0
+PyYAML==6.0.1
+keyboard==0.13.5
+bs4==0.0.1
