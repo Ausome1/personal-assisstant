@@ -51,12 +51,12 @@
 			]
 		},
 		{
-			"tag": "firefox",
+			"tag": "brave",
 			"patterns": [
-				"open firefox"
+				"open brave"
 			],
 			"responses": [
-				"Opening Firefox for you."
+				"Opening Brave for you."
 			]
 		},
 		{

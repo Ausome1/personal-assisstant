@@ -39,7 +39,7 @@ class Assistant:
 		self.assistant = BasicAssistant("intents.json", model_name="intent_model", method_mappings={	
 			"open_cmd_prompt": self._open_cmd_prompt,
 			"powershell": self._open_powershell,
-			"firefox": self._open_firefox,
+			"brave": self._open_brave,
 			"chrome": self._open_chrome,
 			"weather": self._show_weather,
 			"play_music": self._play_music,
@@ -149,8 +149,8 @@ class Assistant:
 	def _open_powershell(self):
 		os.system('start powershell')
 
-	def _open_firefox(self):
-		os.system("start firefox")
+	def _open_brave(self):
+		os.system("start brave")
 
 	def _open_chrome(self):
 		os.system("start chrome")
